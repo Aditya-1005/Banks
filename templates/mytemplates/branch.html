@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends 'mytemplates/base.html' %}
+{% block body_block %}
+    <div class="container" align="center">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-success" value="Add Branch">
+        </form>
+    </div>
+{% endblock %}
